@@ -10,7 +10,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'https://github.com/nks2112/Abstergo_cicd.git'
+                git branch: 'main', url: 'https://github.com/nks2112/Abstergo_cicd.git'
             }
         }
 
