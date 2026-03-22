@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: train-service
+  name: Abstergo-service
 spec:
-  type: NodePort
   selector:
-    app: train
+    app: Abstergo-app
+  type: NodePort
   ports:
-    - port: 80
+    - protocol: TCP
+      port: 3000
       targetPort: 3000
-      nodePort: 30007
