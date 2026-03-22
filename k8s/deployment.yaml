@@ -13,7 +13,7 @@ spec:
         app: abstergo-app
     spec:
       containers:
-      - name: abstergo-app
-        image: navesing2112/abstergo-app:latest   # Jenkins pipeline will replace this
-        ports:
-        - containerPort: 3000
+        - name: abstergo-app
+          image: IMAGE        # <-- placeholder to replace
+          ports:
+            - containerPort: 3000
