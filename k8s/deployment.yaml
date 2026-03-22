@@ -2,11 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: abstergo-deployment
+  labels:
+    app: abstergo-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: abstergo-app
+      app: abstergo-app   # MUST always match template labels
   template:
     metadata:
       labels:
@@ -14,6 +16,6 @@ spec:
     spec:
       containers:
         - name: abstergo-app
-          image: IMAGE        # <-- placeholder to replace
+          image: navesing2112/abstergo-app:latest   # replace dynamically in pipeline
           ports:
             - containerPort: 3000
