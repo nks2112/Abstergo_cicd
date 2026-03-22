@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: train-app
+  name: Abstergo-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: train
+      app: Abstergo-app
   template:
     metadata:
       labels:
-        app: train
+        app: Abstergo-app
     spec:
       containers:
-      - name: train
-        image: IMAGE
+      - name: Abstergo-app
+        image: navesing2112/Abstergo-app:latest   # Jenkins pipeline will replace this
         ports:
         - containerPort: 3000
