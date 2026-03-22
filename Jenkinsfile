@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_HUB = "navesing2112"
-        IMAGE_NAME = "Abstergo-app"
+        IMAGE_NAME = "abstergo-app"
     }
 
     stages {
